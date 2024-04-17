@@ -15,7 +15,6 @@ from integration_test_utils import random_string, logger
 
 class AWSIntegrationTestClient:
     ROTATION_TIMEOUT_SECONDS = 60
-    VERSION_ID_LENGTH = 32  # Minimum accepted version ID length
     LAMBDA_FUNCTION_TAG_KEY = "tmp-influxdb-integration-test-lambda-function"
     LAMBDA_FUNCTION_TAG_VALUE = "multi-user-rotation-integration-lambda"
     LAMBDA_FUNCTION_RUNTIME = "python3.12"

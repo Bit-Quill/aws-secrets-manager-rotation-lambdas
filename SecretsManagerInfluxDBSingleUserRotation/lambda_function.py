@@ -529,9 +529,11 @@ def get_secret_dict(secrets_client, arn, stage, version_id=None):
     This helper function gets credentials for the arn and stage passed in and returns the dictionary by parsing the
     JSON string
 
-    Args: secrets_client (client): The secrets manager service client arn (string): The secret ARN or other
-    identifier stage (string): The stage identifying the secret version version_id (string): The ClientRequestToken
-    associated with the secret version, or None if no validation is desired
+    Args:
+        secrets_client (client): The secrets manager service client
+        arn (string): The secret ARN or other identifier
+        stage (string): The stage identifying the secret version
+        version_id (string): The ClientRequestToken associated with the secret version, or None if no validation is desired
 
     Returns:
         SecretDictionary: Secret dictionary

@@ -257,7 +257,7 @@ def create_secret(secrets_client, boto_session, arn, version_id, create_auth_ena
         boto_session (session): Session to retrieve timestream-influxdb client
         arn (string): The secret ARN or other identifier
         version_id (string): The ClientRequestToken associated with the secret version
-        auth_creation_enabled (boolean): Flag for if authentication creation is enabled
+        create_auth_enabled (boolean): Flag for if authentication creation is enabled
 
     Raises:
         ResourceNotFoundException: If the secret with the specified arn and stage does not exist
@@ -912,9 +912,11 @@ def get_secret_dict(secrets_client, arn, stage, version_id=None):
     This helper function gets credentials for the arn and stage passed in and returns the dictionary by parsing the
     JSON string
 
-    Args: secrets_client (client): The secrets manager service client arn (string): The secret ARN or other
-    identifier stage (string): The stage identifying the secret version versionId (string): The ClientRequestToken
-    associated with the secret version, or None if no validation is desired
+    Args:
+        secrets_client (client): The secrets manager service client
+        arn (string): The secret ARN or other identifier
+        stage (string): The stage identifying the secret version
+        versionId (string): The ClientRequestToken associated with the secret version, or None if no validation is desired
 
     Returns:
         SecretDictionary: Secret dictionary

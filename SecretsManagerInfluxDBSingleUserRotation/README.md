@@ -1,7 +1,7 @@
 # Amazon InfluxDB Single User Rotator
 
 ## Getting Started
-The InfluxDB Single-User Rotator rotates a user's authorization token or credentials using the AWS Secrets Manager. The Single-user rotator operates by using the users authentication token or credentials to rotate their token or credentials with new permission identical equivalents. The user token performing the rotation must have the permissions to perform the rotation. For token rotation the type of the token could be an `operator` or `allAccess` token to successfully complete rotation.
+The InfluxDB Single-User Rotator rotates a user's authorization token or credentials using the AWS Secrets Manager. The Single-user rotator operates by using the user's authentication token or credentials to rotate their token or credentials with new permission identical equivalents. The user token performing the rotation must have the permissions to perform the rotation. For token rotation the type of the token could be an `operator` or `allAccess` token to successfully complete rotation.
 
 ### InfluxDB Single-user Token Rotation State Diagram
 The InfluxDB Single-user Token Rotation State Diagram illustrates how a secret authenticates the rotation of their own user or token with each successful step provided by the `Secrets Manager`.
@@ -119,7 +119,7 @@ Username and Password Credentials (for rotating admin user password)
 
 ## Deploy Lambda
 1. Execute script with the following command (Requires pip3 installed)
-- If you are using MacOS or Linux, execute the following commands
+- If you are using macOS or Linux, execute the following commands
   - `./build_deployment.sh`_(to build deployable lambda function package from the source code)_
   - Execute the following command to add execution permissions to your deployment package
   - `sudo chmod +x influxdb-token-rotation-lambda.zip`

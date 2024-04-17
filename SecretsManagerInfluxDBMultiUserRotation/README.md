@@ -1,11 +1,11 @@
 # Amazon InfluxDB Multi User Rotator
 
 ## Getting Started
-The InfluxDB Multi-User Rotator is used to rotate a user's authorization token or credentials with the use of the AWS Secrets Manager. The Multi-user rotator operates by using an operator authenticated session to rotate a users token or credentials with a new permission identical token or credential. The rotating token or credentials can have any permissions, and the Secrets Manager token must be an operator token. See [InfluxDB Documentation](https://docs.influxdata.com/influxdb/v2/admin/tokens) for how to create and manage tokens. The benefit of using an operator to rotate a users token is that the rotating user does not require the associated read and write permissions to complete the token rotation.
+The InfluxDB Multi-User Rotator is used to rotate a user's authorization token or credentials with the use of the AWS Secrets Manager. The Multi-user rotator operates by using an operator authenticated session to rotate a user's token or credentials with a new permission identical token or credential. The rotating token or credentials can have any permissions, and the Secrets Manager token must be an operator token. See [InfluxDB Documentation](https://docs.influxdata.com/influxdb/v2/admin/tokens) for how to create and manage tokens. The benefit of using an operator token to rotate a user's token is that the rotating user does not require the associated read and write permissions to complete the token rotation.
 
 ### InfluxDB Multi-user Token Rotation State Diagram
 
-The InfluxDB Multi-user Token Rotation State Diagram illustrates how an admin users token authenticates the rotation of another users token with each successful step provided by the `Secrets Manager`.
+The InfluxDB Multi-user Token Rotation State Diagram illustrates how an admin user's token authenticates the rotation of another user's token with each successful step provided by the `Secrets Manager`.
 
 ```mermaid
 stateDiagram-v2
@@ -137,7 +137,7 @@ Username and Password Credentials (for rotating user password)
 
 ## Deploy Lambda
 1. Execute script with the following command (Requires pip3 installed)
-- If you are using MacOS or Linux, execute the following commands
+- If you are using macOS or Linux, execute the following commands
   - `./build_deployment.sh`_(to build deployable lambda function package from the source code)_
   - Execute the following command to add execution permissions to your deployment package
   - `sudo chmod +x influxdb-token-rotation-lambda.zip`
