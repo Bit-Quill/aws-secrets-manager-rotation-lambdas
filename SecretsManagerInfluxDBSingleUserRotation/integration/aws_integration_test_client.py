@@ -250,7 +250,7 @@ class AWSIntegrationTestClient:
             stdout=subprocess.PIPE,
             cwd=os.path.pardir,
         )
-        archive_path = Path("./influxdb-token-rotation-lambda.zip")
+        archive_path = Path("../influxdb-token-rotation-lambda.zip")
         if not archive_path.is_file():
             logger.error("Building rotation lambda function deployment failed")
             return
