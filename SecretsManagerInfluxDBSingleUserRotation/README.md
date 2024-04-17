@@ -293,7 +293,7 @@ Username and Password Credentials (for rotating admin user password)
 <br>
 
 6. Your `InfluxDB Rotation Lambda` should now have internet access
-- Below I have listed all required components to the VPC for referece
+- Below I have listed all required components to the VPC for reference
 - Your configuration may look different, but if you have a `Route` from your private `Subnets` to a `NAT Gateway` linking through to the `Internet Gateway`, the lambda function should have internet access
 
 <br>
